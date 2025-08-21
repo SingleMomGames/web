@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SingleMomGames</title>
+    <meta name="theme-color" content="#1c0f26" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HERO con imagen de fondo (banner.png) controlada por CSS) -->
+    <div class="hero">
+        <div class="overlay">
+            <h1>🔥 Bienvenid@ a Single Mom Games 🔥</h1>
+            <p>¡Descubre quién gana en cada juego! 🎮</p>
+        </div>
+    </div>
+
+    <main class="container">
+        <!-- VIDEO -->
+        <section class="tiktok-container card">
+            <h2>🎥 Video</h2>
+            <div id="tiktok-embed">
+                <!-- El backend enviará HTML aquí; el JS inyecta el script de TikTok si hace falta -->
+            </div>
+        </section>
+
+        <!-- POZO -->
+        <section class="pozo card">
+            <h2>💰 Pozo actual: <span id="pozo">Cargando...</span></h2>
+        </section>
+
+        <!-- COMENTARIOS -->
+        <section class="comentarios card">
+            <h2>🗨️ Comentarios de los participantes</h2>
+            <div id="comentarios-list"></div>
+        </section>
+
+        <!-- RULETA -->
+        <section class="ruleta card" id="roulette-section" style="display:none;">
+            <h2>🎯 Ruleta de participantes</h2>
+            <div class="wheel-wrapper">
+                <div class="pointer"></div>
+                <canvas id="roulette-canvas" width="300" height="300"></canvas>
+            </div>
+            <p id="roulette-result"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Sígueme en <a href="https://kick.com/singlemomgames" target="_blank" rel="noopener">Kick</a> y otras redes ✨</p>
+    </footer>
+
+    <!-- SignalR (cliente JS) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/9.0.6/signalr.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Tu lógica -->
+    <script src="script.js"></script>
+</body>
+</html>
